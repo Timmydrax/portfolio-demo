@@ -1,4 +1,4 @@
-import { UserResumeData } from "../../data/resume";
+import { UserResumeData } from "../../config/user-data/resume";
 
 export default function ResumeWorkExperience() {
   return (

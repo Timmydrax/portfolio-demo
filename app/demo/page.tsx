@@ -1,7 +1,7 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { AVAILABLE_TEMPLATES } from "@/data/templates/config";
+import { AVAILABLE_TEMPLATES } from "@/config/app-data/templates/config";
 import BaseTemplate from "@/templates/base/page";
 import ShadowTemplate from "@/templates/shadow/page";
 import { useEffect } from "react";
@@ -33,7 +33,9 @@ const DemoPage = () => {
       <div className="fixed top-0 left-0 right-0 bg-gray-900 text-white z-50 py-3 px-4">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-4">
-            <span className="bg-blue-500 text-xs font-medium px-2.5 py-1 rounded">DEMO</span>
+            <span className="bg-blue-500 text-xs font-medium px-2.5 py-1 rounded">
+              DEMO
+            </span>
             <span className="text-sm">
               Viewing the {template || "Base"} template
             </span>
@@ -57,9 +59,7 @@ const DemoPage = () => {
       </div>
 
       {/* Add padding to account for the demo banner */}
-      <div className="pt-14">
-        {renderTemplate()}
-      </div>
+      <div className="pt-14">{renderTemplate()}</div>
     </div>
   );
 };

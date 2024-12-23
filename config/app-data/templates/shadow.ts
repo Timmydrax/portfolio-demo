@@ -1,12 +1,11 @@
-import { UserInfoData } from "../usersInfo";
-
+import { UserInfoData } from "../../user-data/userInfo";
 
 export enum FeaturesEnum {
-    SOCIALS_SECTION = "SOCIALS_SECTION",
-    SKILLS_SECTION = "SKILLS_SECTION",
-    PROJECTS_SECTION = "PROJECTS_SECTION",
-    WORK_EXPERIENCE_SECTION = "WORK_EXPERIENCE_SECTION",
-  }
+  SOCIALS_SECTION = "SOCIALS_SECTION",
+  SKILLS_SECTION = "SKILLS_SECTION",
+  PROJECTS_SECTION = "PROJECTS_SECTION",
+  WORK_EXPERIENCE_SECTION = "WORK_EXPERIENCE_SECTION",
+}
 
 export interface ShadowTemplate {
   inspiredBy?: string;

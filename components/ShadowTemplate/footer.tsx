@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { AppSettingData } from "@/data/appSetting";
+import { AppSettingData } from "../../config/app-data/appSetting";
 import { containerVariants, itemVariants } from "./animations";
 import Link from "next/link";
 
@@ -14,12 +14,9 @@ export function ShadowFooter() {
       className="py-12 border-t border-black/10"
     >
       <div className="max-w-[1000px] mx-auto px-4">
-        <motion.div
-          variants={itemVariants}
-          className="flex flex-col space-y-8"
-        >
+        <motion.div variants={itemVariants} className="flex flex-col space-y-8">
           {/* Credits Section */}
-          <motion.div 
+          <motion.div
             variants={itemVariants}
             className="text-center border-t border-black/5 pt-8"
           >

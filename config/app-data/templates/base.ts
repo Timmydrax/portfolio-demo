@@ -1,4 +1,4 @@
-import { UserInfoData } from "../usersInfo";
+import { UserInfoData } from "../../user-data/userInfo";
 
 export enum FeaturesEnum {
   SOCIALS_SECTION = "SOCIALS_SECTION",

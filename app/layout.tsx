@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { AppSettingData } from "../data/appSetting";
-import { BaseTemplate } from "../data/templates/base";
+import { AppSettingData } from "../config/app-data/appSetting";
+import { BaseTemplate } from "../config/app-data/templates/base";
 
 export const metadata: Metadata = {
   title: `${AppSettingData.appName} - ${BaseTemplate.fullName} Portfolio`,

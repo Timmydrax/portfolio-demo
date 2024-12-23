@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { AVAILABLE_TEMPLATES } from "@/data/templates/config";
 import Link from "next/link";
 import Image from "next/image";
+import { AVAILABLE_TEMPLATES } from "../../config/app-data/templates/config";
 
 const containerVariants = {
   hidden: { opacity: 0 },

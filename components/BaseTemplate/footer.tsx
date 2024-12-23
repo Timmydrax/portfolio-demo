@@ -1,7 +1,7 @@
 "use client";
 
-import { AppSettingData } from "@/data/appSetting";
 import Link from "next/link";
+import { AppSettingData } from "../../config/app-data/appSetting";
 
 export function BaseFooter() {
   return (

@@ -1,5 +1,5 @@
-import { UserWorkExperienceData } from "@/data/workExperience";
-import { BaseTemplate } from "../../data/templates/base";
+import { UserWorkExperienceData } from "../../config/user-data/workExperience";
+import { BaseTemplate } from "../../config/app-data/templates/base";
 
 export const WorkExperienceSection = () => {
   if (!BaseTemplate.features.WORK_EXPERIENCE_SECTION) return;

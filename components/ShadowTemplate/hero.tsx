@@ -2,9 +2,9 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { UserInfoData } from "@/data/usersInfo";
-import { UserSocialsData } from "@/data/socials";
 import { containerVariants, itemVariants } from "./animations";
+import { UserInfoData } from "../../config/user-data/userInfo";
+import { UserSocialsData } from "../../config/user-data/socials";
 
 export function ShadowHero() {
   return (
@@ -16,10 +16,7 @@ export function ShadowHero() {
           animate="visible"
           variants={containerVariants}
         >
-          <motion.div 
-            variants={itemVariants}
-            className="mb-8"
-          >
+          <motion.div variants={itemVariants} className="mb-8">
             <Image
               src={
                 UserInfoData.heroImage.type === "url"
@@ -33,17 +30,23 @@ export function ShadowHero() {
             />
           </motion.div>
 
-          <motion.h1 
+          <motion.h1
             className="text-[clamp(40px,8vw,80px)] font-bold leading-none mb-8"
             variants={itemVariants}
           >
-            <span className="text-black font-mono text-base block mb-5">Hi, my name is</span>
-            <span className="text-black text-[clamp(25px,4vw,40px)] block mb-2">{UserInfoData.fullName}.</span>
-            <span className="text-black text-[clamp(10px,4vw,15px)] block">{UserInfoData.tagLine}</span>
+            <span className="text-black font-mono text-base block mb-5">
+              Hi, my name is
+            </span>
+            <span className="text-black text-[clamp(25px,4vw,40px)] block mb-2">
+              {UserInfoData.fullName}.
+            </span>
+            <span className="text-black text-[clamp(10px,4vw,15px)] block">
+              {UserInfoData.tagLine}
+            </span>
           </motion.h1>
 
           <motion.div variants={itemVariants} className="mb-8">
-            <Link 
+            <Link
               href="/resume"
               className="inline-block px-7 py-4 border border-black text-black font-mono rounded hover:bg-black/10 transition-colors"
             >
@@ -54,18 +57,20 @@ export function ShadowHero() {
           {/* Social Icons */}
           <motion.div variants={itemVariants}>
             <ul className="flex items-center gap-8">
-              {Object.entries(UserSocialsData).map(([key, { url, icon: Icon }]) => (
-                <li key={key}>
-                  <Link 
-                    href={url} 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-black hover:text-black/70 hover:-translate-y-1 transition-all inline-block p-4"
-                  >
-                    <Icon size={24} />
-                  </Link>
-                </li>
-              ))}
+              {Object.entries(UserSocialsData).map(
+                ([key, { url, icon: Icon }]) => (
+                  <li key={key}>
+                    <Link
+                      href={url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-black hover:text-black/70 hover:-translate-y-1 transition-all inline-block p-4"
+                    >
+                      <Icon size={24} />
+                    </Link>
+                  </li>
+                )
+              )}
             </ul>
           </motion.div>
         </motion.div>
@@ -77,9 +82,7 @@ export function ShadowHero() {
           variants={containerVariants}
           className="text-lg leading-relaxed space-y-6 font-mono lg:-mt-45"
         >
-          <motion.p variants={itemVariants}>
-            {UserInfoData.miniBio}
-          </motion.p>
+          <motion.p variants={itemVariants}>{UserInfoData.miniBio}</motion.p>
         </motion.div>
       </div>
     </main>

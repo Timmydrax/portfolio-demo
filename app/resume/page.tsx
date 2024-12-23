@@ -5,7 +5,10 @@ import generatePDF from "react-to-pdf";
 
 import ResumeWorkExperience from "../../components/Resume/workExperience";
 import ResumeHeader from "../../components/Resume/header";
-import { UserResumeData, UserResumeSections } from "../../data/resume";
+import {
+  UserResumeData,
+  UserResumeSections,
+} from "../../config/user-data/resume";
 
 export default function Resume() {
   const targetRef = useRef();

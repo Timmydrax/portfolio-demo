@@ -1,5 +1,5 @@
-import { UserSkillsData } from "../../data/skills";
-import { BaseTemplate } from "../../data/templates/base";
+import { BaseTemplate } from "../../config/app-data/templates/base";
+import { UserSkillsData } from "../../config/user-data/skills";
 
 export const SkillsSection = () => {
   if (!BaseTemplate.features.SKILLS_SECTION) return;

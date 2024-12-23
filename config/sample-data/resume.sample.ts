@@ -1,15 +1,18 @@
-import { UserSocialsData } from "./socials"
-import { UserInfoData } from "./usersInfo"
-import { IWorkExperience, UserWorkExperienceData } from "./workExperience"
+import { UserSocialsData } from "../user-data/socials";
+import { UserInfoData } from "../user-data/userInfo";
+import {
+  IWorkExperience,
+  UserWorkExperienceData,
+} from "../user-data/workExperience";
 
 interface IUserResumeData {
-  name: string
-  tagline: string
-  socials: typeof UserSocialsData
-  skills?: string[]
-  education?: string[]
-  spokenLanguages?: string[]
-  experience?: IWorkExperience[]
+  name: string;
+  tagline: string;
+  socials: typeof UserSocialsData;
+  skills?: string[];
+  education?: string[];
+  spokenLanguages?: string[];
+  experience?: IWorkExperience[];
 }
 
 export const UserResumeData: IUserResumeData = {
@@ -26,7 +29,7 @@ export const UserResumeData: IUserResumeData = {
   education: ["Certificate"],
   spokenLanguages: ["English"],
   experience: UserWorkExperienceData,
-}
+};
 
 // This is to control which sections to show in the resume page
 export const UserResumeSections = {
@@ -34,4 +37,4 @@ export const UserResumeSections = {
   skills: true,
   education: true,
   spokenLanguages: true,
-}
+};
