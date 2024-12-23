@@ -65,7 +65,27 @@ git clone https://github.com/IDAN-DEVS/portify.git
 cd portify && npm install
 ```
 
-2. **Start Development**
+2. **Initialize Configuration**
+
+```bash
+npm run init-config
+```
+
+This will create your personal configuration files in the `config/user-data` directory based on the sample templates.
+
+3. **Configure Your Portfolio**
+
+Update the configuration files in `config/user-data`:
+
+- `personal.json` - Your personal information and bio
+- `projects.json` - Your projects and portfolio items
+- `experience.json` - Your work experience and education
+- `skills.json` - Your technical skills and expertise
+- `socials.json` - Your social media links
+
+See the [Configuration Guide](USAGE.md) for detailed examples of each file format.
+
+4. **Start Development**
 
 ```bash
 npm run dev
